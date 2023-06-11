@@ -36,3 +36,18 @@ app.post("/notes", (req, res) => {
     });
   });
 });
+
+app.delete("/notes/:id", (req, res) => {
+  const id = req.params.id;
+  noteSchema
+    .deleteOne({ _id: id })
+    .then(() => {
+      console.log(`${id} idli Veri silindi.`);
+    })
+    .catch((hata) => {
+      console.error("Silme hatası:", hata);
+    })
+    .finally(() => {
+      noteSchema.find().then((result) => res.send(result));
+    });
+});

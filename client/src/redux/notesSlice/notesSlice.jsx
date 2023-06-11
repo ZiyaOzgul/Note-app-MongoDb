@@ -17,6 +17,14 @@ export const postNotesAsync = createAsyncThunk(
   }
 );
 
+export const deleteNoteAsync = createAsyncThunk(
+  "/notes/deleteNoteAsync",
+  async ({ id }) => {
+    const res = await axios.delete(`http://localhost:3001/notes/${id}`);
+    return res.data;
+  }
+);
+
 export const notesSlice = createSlice({
   name: "notes",
   initialState: {
@@ -65,6 +73,18 @@ export const notesSlice = createSlice({
       state.isLoading = false;
     },
     [postNotesAsync.rejected]: (state, action) => {
+      state.error = action.error.message;
+      state.isLoading = false;
+    },
+    //del
+    [deleteNoteAsync.pending]: (state, action) => {
+      state.isLoading = true;
+    },
+    [deleteNoteAsync.fulfilled]: (state, action) => {
+      state.note = action.payload;
+      state.isLoading = false;
+    },
+    [deleteNoteAsync.rejected]: (state, action) => {
       state.error = action.error.message;
       state.isLoading = false;
     },

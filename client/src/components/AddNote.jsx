@@ -62,27 +62,35 @@ const AddNote = () => {
               </h2>
               <div className="flex items-center justify-center space-x-6 w-full py-3">
                 <button
-                  className="rounded-full bg-red-700 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500 "
+                  className={`rounded-full bg-red-400 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500 ${
+                    color === "bg-red-400" ? "border border-black" : null
+                  } `}
                   onClick={() => {
-                    setColor("red");
+                    setColor("bg-red-400");
                   }}
                 ></button>
                 <button
-                  className="rounded-full bg-blue-600 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500"
+                  className={`rounded-full bg-blue-400 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500 ${
+                    color === "bg-blue-400" ? "border border-black" : null
+                  }`}
                   onClick={() => {
-                    setColor("blue");
+                    setColor("bg-blue-400");
                   }}
                 ></button>
                 <button
-                  className="rounded-full bg-green-600 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500"
+                  className={`rounded-full bg-green-400 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500 ${
+                    color === "bg-green-400" ? "border border-black" : null
+                  }`}
                   onClick={() => {
-                    setColor("green");
+                    setColor("bg-green-400");
                   }}
                 ></button>
                 <button
-                  className="rounded-full bg-amber-600 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500"
+                  className={`rounded-full bg-yellow-400 border w-10 h-10 group  hover:scale-110  transition-all ease-in-out duration-500 ${
+                    color === "bg-yellow-400" ? "border border-black" : null
+                  }`}
                   onClick={() => {
-                    setColor("yellow");
+                    setColor("bg-yellow-400");
                   }}
                 ></button>
               </div>
