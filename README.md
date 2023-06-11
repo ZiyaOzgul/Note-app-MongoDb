@@ -6,8 +6,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Product Name Screen Shot]([https://github.com/ZiyaOzgul/React-Weather-App/blob/master/client/img/note-2.png](https://github.com/ZiyaOzgul/Note-app-MongoDb/blob/main/client/src/img/note-2.png))
-![Product Name Screen Shot]([https://github.com/ZiyaOzgul/React-Weather-App/blob/master/client/img/note.png](https://github.com/ZiyaOzgul/Note-app-MongoDb/blob/main/client/src/img/note.png))
+![Product Name Screen Shot](https://github.com/ZiyaOzgul/Note-app-MongoDb/blob/main/client/src/img/note-2.png)
+![Product Name Screen Shot](https://github.com/ZiyaOzgul/Note-app-MongoDb/blob/main/client/src/img/note.png)
 
 
 
